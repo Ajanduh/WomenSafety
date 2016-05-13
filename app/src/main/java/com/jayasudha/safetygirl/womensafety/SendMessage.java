@@ -53,7 +53,7 @@ public class SendMessage extends ActionBarActivity {
                     getApplicationContext(), new GeocoderHandler());
 
             // \n is for new line
-            Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Current Location  - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
         } else {
             // can't get location
             // GPS or Network is not enabled
@@ -82,7 +82,8 @@ public class SendMessage extends ActionBarActivity {
 
             try {
                 //  Toast.makeText("hii",Toast.LENGTH_LONG);
-                String msg = "I am in danger.. Please help me soon" + result;
+                String msg = "Please help i am stuck" + result;
+                String msg = "LAT IS" + latitude + "\nLong is" + longitude, Toast.LENGTH_LONG).show();
                 SmsManager smsManager = SmsManager.getDefault();
                 smsManager.sendTextMessage(n, null, msg, null, null);
                 Toast.makeText(getApplicationContext(), "SMS sent.",
